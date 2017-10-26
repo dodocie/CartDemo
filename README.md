@@ -1,6 +1,7 @@
 # cart-demo
 
 > this is the third one bcoz the early version failed  again  when  built.
+> 项目在打包过程中出现了问题，尚未解决，因此本项目为未打包的版本。
 
 ## Build Setup
 
