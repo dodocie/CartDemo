@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>购物车</title>
+      <link rel="stylesheet" href="css/reset_pc.css">
+      <link rel="stylesheet" href="css/cart.css">
+	  <script src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+	  <script src="js/vue-resource.js"></script>
+  </head>
+  <body>
+
+    <div id="container">
+      <div id="app">
+        <h1 class="welcome_msg">{{msg}}</h1>
+        <div class="cart cart_title">
+          <ul>
+            <li>
+              <input type="checkbox" id="select_all" v-model="allChecked">
+              <!--@click="selectAllProduct()"-->
+              <label for="select_all">全选</label>
+              <!--:class="{'checked':checkedAllFlag}"-->
+            </li>
+            <li>商品信息</li>
+            <li>单价</li>
+            <li>数量</li>
+            <li>金额</li>
+            <li>操作</li>
+          </ul>
+        </div>
+        <div v-for="(item, index) in itemList" class="cart">
+          <ul>
+            <li>
+              <input type="checkbox" title="" v-bind:value="item.productId" v-model="item.checked" @click="selectProduct(item)">
+              <!--v-bind:class="{'checked':item.selected}"-->
+            </li>
+            <li>
+              <img src="" :src="item.productImg" alt="">
+              <blockquote>
+                <p>{{item.productName}}</p>
+                <span>{{item.productDescription}}</span>
+              </blockquote>
+            </li>
+            <li>{{item.productPrice}}</li>
+            <li>
+              <!--<input type="number" min="0" max="10">-->
+              <button style="padding:1px 4px" @click="amountChange(item, -1)">-</button>
+              <input type="text" v-bind:value="item.counter">
+              <button style="padding:1px 4px" @click="amountChange(item, 1)">+</button>
+            </li>
+            <li>{{item.productPrice*item.counter}}</li>
+              <li><a href="JavaScript:void(0);" @click="deleteConfirm(item)">删除</a></li>
+          </ul>
+        </div>
+        <div class="cart_total">
+            <p>合计：￥<span>{{calTotalCost}}</span></p>
+            <a href="javascript:void(0)" :href="toLink(calTotalAmount)" :class="{'disabled': isActive}" >结算(&nbsp;{{calTotalAmount}}&nbsp;)</a>
+        </div>
+        <div class="delete_confirm delete_show" v-if="deleteFlag" v-bind:class="{'delete_show':deleteFlag}">
+            <ul>
+                <li><p>删除宝贝</p></li>
+                <li><span>确认要删除该宝贝吗？</span></li>
+                <li>
+                    <a class="dialog_btn dialog_btn_confirm" href="javascript:void(0)" @click="removeProduct">确认</a>
+                    <a class="dialog_btn dialog_btn_cxl" href="javascript:void(0)" @click="deleteFlag=false">关闭</a>
+                </li>
+            </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- built files will be auto injected -->
+  </body>
+
+
+  <script src="js/cart.js"></script>
+
+</html>

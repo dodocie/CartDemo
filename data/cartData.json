@@ -1,0 +1,39 @@
+{
+  "status": 1,
+  "message": "success",
+  "data":{
+    "money":666,
+    "list":[
+      {
+        "productName": "新玉润玫瑰菁华霜",
+        "productDescription": "深层滋养，持久保湿抵御干燥，令肌肤莹润饱满，如玉般晶莹细滑。",
+        "productId":"01",
+        "productPrice": 300,
+        "productStorage": 50,
+        "counter":1,
+        "checked":false,
+        "productImg":"images/1.jpg"
+      },
+      {
+        "productName": "新玉润保湿化妆水",
+        "productDescription": "蕴含佰草集“新天地玉润方”本草精华，特润呵护冬日肌肤。",
+        "productId":"02",
+        "productPrice": 200,
+        "productStorage": 50,
+        "counter":1,
+        "checked":false,
+        "productImg":"images/2.jpg"
+      },
+      {
+        "productName": "新玉润保湿凝露",
+        "productDescription": "蕴含佰草集“新天地玉润方”本草精华，特润呵护冬日肌肤。",
+        "productId":"02",
+        "productPrice": 400,
+        "productStorage": 50,
+        "counter":1,
+        "checked":false,
+        "productImg":"images/3.jpg"
+      }
+    ]
+  }
+}
