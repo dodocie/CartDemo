@@ -31,7 +31,7 @@
         <div v-for="(item, index) in itemList" class="cart">
           <ul>
             <li>
-              <input type="checkbox" title="" v-bind:value="item.productId" v-model="item.checked" @click="selectProduct(item)">
+              <input type="checkbox" v-bind:id="item.productId" v-bind:value="item.productId" v-model="item.checked" @click="selectProduct(item)">
               <label v-bind:for="item.productId"></label>
               <!--v-bind:class="{'checked':item.selected}"-->
             </li>
