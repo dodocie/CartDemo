@@ -1,14 +1,21 @@
 # cart-demo
+1. 本项目实现的功能：
 
-> this is the third one bcoz the early version failed  again  when  built.
-> 项目在build时过程中出现了问题，好在在这里备份了。
+      1.1 购物车的商品数据从 json 文件获取。假设已经从后台获取到了 json 数据。
+  
+      1.2 用户可以对购物车里的各项操作全选、反选，增加数量、减少数量（限定大于等于1），删除某个商品。
+  
+      1.3 实时计算商品数量和金额。
+  
+      1.4 限制结账功能：只有在总金额大于0时，用户才能点击结算按钮跳转。
+
 1. npm run build 打包项目时产生的问题。在尝试了各种方法以后，包括重新创建项目，重新npm install等，问题还多了一个：无法打包images文件。
 
 尝试过的方法：
 
-    1.1 修改config - index.js文件：build下的 assetsPublicPath: './',这里多加一个点。也有观点建议直接改成 assetsPublicPath: '.',失败。
+   2.1 修改config - index.js文件：build下的 assetsPublicPath: './',这里多加一个点。也有观点建议直接改成 assetsPublicPath: '.',失败。
   
-    1.2 build - utils.js文件：增加一个路径 publicPath:'../../'
+   2.2 build - utils.js文件：增加一个路径 publicPath:'../../'
   
             if (options.extract) {
         
@@ -23,9 +30,9 @@
               })
           
             
-      1.3 还未尝试的方法：config - index.js文件：productionSourceMap: true, 改成false。
+     2.3 还未尝试的方法：config - index.js文件：productionSourceMap: true, 改成false。
 
-2. 而在创建这个SPA时，遇到了一些坑：http://www.cnblogs.com/dodocie/p/7714908.html 说多了都是泪。
+
 
 3. 开发时的问题：
 
@@ -33,16 +40,7 @@
       
       3.2 以上事件用computed监听变化来进行实时计算。
   
-4. 本项目实现的功能：
-
-      4.1 购物车的商品数据从 json 文件获取。假设已经从后台获取到了 json 数据。
-  
-      4.2 用户可以对购物车里的各项操作全选、反选，增加数量、减少数量（限定大于等于1），删除某个商品。
-  
-      4.3 实时计算商品数量和金额。
-  
-      4.4 限制结账功能：只有在总金额大于0时，用户才能点击结算按钮跳转。
-
+4. 而在创建这个SPA时，遇到了一些坑：http://www.cnblogs.com/dodocie/p/7714908.html 说多了都是泪。
 ## Build Setup
 
 ``` bash
