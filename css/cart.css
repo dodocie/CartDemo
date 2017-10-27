@@ -129,6 +129,7 @@ a.disabled{
 }
 
 .dialog_btn {
+    border: 1px solid #d9d9d9;
     color: #3c3c3c;
     width: 58px;
     height: 28px;
@@ -143,8 +144,7 @@ a.disabled{
     margin-top: 20px;
 }
  .dialog_btn_cxl {
-    background: #fff;
-    border-color: #d9d9d9;
+    border-color: #F44336;
     background: #F44336;
     color: #fff;
 }
