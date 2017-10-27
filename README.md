@@ -10,7 +10,9 @@
       1.4 限制结账功能：只有在总金额大于0时，用户才能点击结算按钮跳转。
 
 2. npm run build 打包项目时产生的问题：
-  
+      
+      2.1 修改
+  
         2.1 修改config - index.js文件：build下的 assetsPublicPath: './',这里多加一个点。也有建议改成assetsPublicPath: '.'。
       
         2.2 修改config - index.js文件：productionScourceMap：true，这里的 true 改成 false。
