@@ -23,13 +23,7 @@
 }
 .cart ul li{
     flex:1;
-}
-.cart ul li label{
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-}
-  
+}  
 .cart ul li:nth-child(2){
     flex:3;
 }
