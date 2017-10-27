@@ -15,7 +15,6 @@
 
 		2.2	修改config - index.js文件：productionScourceMap：true，这里的 true 改成 false。
 
-
 		2.3	重建项目，用cnpm install，项目打包时无法打包img。
 
 		2.4	build - utils.js文件：增加一个路径 publicPath:'../../' 
