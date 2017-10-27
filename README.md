@@ -1,4 +1,12 @@
 # cart-demo
+开发环境：
+
+    操作系统：Win-7
+
+    开发工具：Webstorm 2017.2
+
+    项目依赖：node.js / webpack / Vue2.0
+
 1. 本项目实现的功能：
 
 		1.1	购物车的商品数据从 json 文件获取。假设已经从后台获取到了 json 数据。
