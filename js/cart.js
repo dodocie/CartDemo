@@ -87,14 +87,14 @@ new Vue({
             }
         },
 
-        //注册一个字段 Vue.$set(obj, key, value)
-        selectProduct:function (item) {
-            if (typeof item.checked =='undefined'){
-                this.$set(item, 'checked', true)
-            }else {
-                item.checked = !item.checked;
-            }
-        },
+//         //注册一个字段 Vue.$set(obj, key, value)
+//         selectProduct:function (item) {
+//             if (typeof item.checked =='undefined'){
+//                 this.$set(item, 'checked', true)
+//             }else {
+//                 item.checked = !item.checked;
+//             }
+//         },
 
 		deleteConfirm: function (item) {
 			this.deleteFlag = true;
