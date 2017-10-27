@@ -11,7 +11,7 @@
 
 1. npm run build 打包项目时产生的问题。在尝试了各种方法以后，包括重新创建项目，重新npm install等，问题还多了一个：无法打包images文件。
 
-尝试过的方法：
+ 尝试过的方法：
 
    2.1 修改config - index.js文件：build下的 assetsPublicPath: './',这里多加一个点。也有观点建议直接改成 assetsPublicPath: '.',失败。
   
@@ -30,8 +30,7 @@
               })
           
             
-     2.3 还未尝试的方法：config - index.js文件：productionSourceMap: true, 改成false。
-
+   2.3 还未尝试的方法：config - index.js文件：productionSourceMap: true, 改成false。
 
 
 3. 开发时的问题：
@@ -40,7 +39,8 @@
       
       3.2 以上事件用computed监听变化来进行实时计算。
   
-4. 而在创建这个SPA时，遇到了一些坑：http://www.cnblogs.com/dodocie/p/7714908.html 说多了都是泪。
+4. 创建本项目时，遇到的坑：http://www.cnblogs.com/dodocie/p/7714908.html 
+
 ## Build Setup
 
 ``` bash
