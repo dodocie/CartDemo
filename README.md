@@ -1,27 +1,16 @@
 # cart-demo
 1. 本项目实现的功能：
-
-      1.1 购物车的商品数据从 json 文件获取。假设已经从后台获取到了 json 数据。
-  
-      1.2 用户可以对购物车里的各项操作全选、反选，增加数量、减少数量（限定大于等于1），删除某个商品。
-  
-      1.3 实时计算商品数量和金额。
-  
-      1.4 限制结账功能：只有在总金额大于0时，用户才能点击结算按钮跳转。
+1.1	购物车的商品数据从 json 文件获取。假设已经从后台获取到了 json 数据。
+1.2	用户可以对购物车里的各项操作全选、反选，增加数量、减少数量（限定大于等于1），删除某个商品。
+1.3	实时计算商品数量和金额。
+1.4	限制结账功能：只有在总金额大于0时，用户才能点击结算按钮跳转。
 
 2. npm run build 打包项目时产生的问题：
-      
-      2.1 修改
-  
-        2.1 修改config - index.js文件：build下的 assetsPublicPath: './',这里多加一个点。也有建议改成assetsPublicPath: '.'。
-      
-        2.2 修改config - index.js文件：productionScourceMap：true，这里的 true 改成 false。
-        
-        2.3 重建项目，用cnpm install，项目打包时无法打包img。
-      
-        2.4 build - utils.js文件：增加一个路径 publicPath:'../../' 
-      
- 
+2.1	修改config - index.js文件：build下的 assetsPublicPath: './',这里多加一个点。也有建议改成assetsPublicPath: '.'。
+2.2	修改config - index.js文件：productionScourceMap：true，这里的 true 改成 false。
+2.3	重建项目，用cnpm install，项目打包时无法打包img。
+2.4	build - utils.js文件：增加一个路径 publicPath:'../../' 
+     
             if (options.extract) {
         
                 return ExtractTextPlugin.extract({
@@ -34,15 +23,12 @@
               
               })
 
-
 3. 开发时的问题：
+3.1	通过从methods写函数的方式来判断全选反选、用 watch 方法监控购物车变化。出现全选与取消全选的逻辑反过来的情况，并导致后面的计算总额出现逻辑混乱。
+3.2	以上事件用computed来进行实时计算
 
-         3.1 通过从methods写函数的方式来判断全选反选、用 watch 方法监控购物车变化。出现全选与取消全选的逻辑反过来的情况，并导致后面的计算总额出现逻辑混乱。
-      
-      
-         3.2 以上事件用computed来进行实时计算
+4. 创建本项目时，遇到的坑：http://www.cnblogs.com/dodocie/p/7714908.html
 
-4. 创建本项目时，遇到的坑：http://www.cnblogs.com/dodocie/p/7714908.html 
 
 ## Build Setup
 
