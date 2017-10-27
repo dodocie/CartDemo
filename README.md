@@ -13,9 +13,10 @@
 
       尝试过的方法：
   
-        2.1 修改config - index.js文件：build下的 assetsPublicPath: './',这里多加一个点。也有建议直接改成 assetsPublicPath: '.'。
+        2.1 修改config - index.js文件：build下的 assetsPublicPath: './',这里多加一个点。也有建议改成assetsPublicPath: '.'。
       
         2.2 修改config - index.js文件：productionScourceMap：true，这里的 true 改成 false。
+        
       
         2.3 build - utils.js文件：增加一个路径 publicPath:'../../' 
       
@@ -35,7 +36,8 @@
 
 3. 开发时的问题：
 
-          3.1 通过从methods写函数的方式来判断全选反选、用 watch 方法监控购物车变化。出现全选与取消全选的逻辑反过来的情况。未解决这个逻辑问题，并导致后面的计算总额出现逻辑混乱。
+         3.1 通过从methods写函数的方式来判断全选反选、用 watch 方法监控购物车变化。出现全选与取消全选的逻辑反过来的情况。
+            未解决这个逻辑问题，并导致后面的计算总额出现逻辑混乱。
           
          3.2 以上事件用computed来进行实时计算
 
