@@ -11,7 +11,8 @@
 
 2. npm run build 打包项目时产生的问题。在尝试了各种方法以后，包括重新创建项目，重新npm install等，问题还多了一个：无法打包images文件。
 
-  尝试过的方法：
+     尝试过的方法：
+  
       2.1 修改config - index.js文件：build下的 assetsPublicPath: './',这里多加一个点。也有建议直接改成 assetsPublicPath: '.'。
       2.2 build - utils.js文件：增加一个路径 publicPath:'../../' 
  
@@ -23,11 +24,12 @@
               
                     fallback: 'vue-style-loader',
               
-                    publicPath:'../../'   //这一行是新增的。记不清，好像是这样写的。反正我失败了。并且现在出现了 image 无法打包的问题！气死了！
+                    publicPath:'../../'   //这一行是新增的。反正我失败了。并且现在出现了 image 无法打包的问题！气死了！
               
               })
 
     2.3 还未尝试的方法：config - index.js文件：productionSourceMap: true, 改成false。
+
 3. 开发时的问题：
 
         3.1 通过从methods写函数的方式来判断全选反选、用 watch 方法监控购物车变化。出现全选与取消全选的逻辑反过来的情况。未解决这个逻辑问题，并导致后面的计算总额出现逻辑混乱。
