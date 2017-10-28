@@ -1,4 +1,15 @@
 /*CSS DOCUMENT */
+
+/*修改input type = number 的默认样式*/
+input[type=number] {
+	-moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
 #container{
     max-width: 1000px;
     margin: 0 auto;
@@ -54,7 +65,7 @@
     height: 20px;
     vertical-align: middle;
 }
-.cart ul li input[type=text]{
+.cart ul li input[type=number]{
     width: 35px;
     height: 20px;
     text-align: center;
