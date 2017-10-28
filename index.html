@@ -46,7 +46,7 @@
             <li>
               <!--<input type="number" min="0" max="10">-->
               <button style="padding:1px 4px" @click="amountChange(item, -1)">-</button>
-              <input type="text" v-model="item.counter" v-number-only>
+              <input type="number" v-model="item.counter" v-number-only>
               <button style="padding:1px 4px" @click="amountChange(item, 1)">+</button>
             </li>
             <li>{{item.productPrice*item.counter}}</li>
